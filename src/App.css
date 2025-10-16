@@ -1,0 +1,237 @@
+/* RapidMAO - Custom Styles */
+
+/* Body and Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffacd; /* Soft yellow background */
+}
+
+.App {
+  min-height: 100vh;
+  background-color: #fffacd;
+}
+
+/* Header Section */
+.app-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); /* Dark blue gradient */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fbbf24; /* Gold/orange color for title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-header p {
+  margin: 10px 0 0 0;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #d1d5db; /* Light gray for subtitle */
+  opacity: 0.9;
+}
+
+/* Main Content Container */
+.app-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Mode Selection Cards Container */
+.mode-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Individual Mode Cards */
+.mode-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  min-width: 280px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.mode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mode-card.selected {
+  border: 3px solid #f97316; /* Orange border for selected */
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+}
+
+/* Mode Card Icons */
+.mode-icon {
+  font-size: 4rem;
+  color: #f97316; /* Orange icons */
+  margin-bottom: 20px;
+  display: block;
+}
+
+.mode-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  color: #1e3a8a; /* Dark blue for card titles */
+}
+
+.mode-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #6b7280; /* Gray for descriptions */
+  line-height: 1.5;
+}
+
+/* Input Form Section */
+.input-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.input-section h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f97316; /* Orange focus */
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); /* Orange gradient */
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Results Section */
+.results-section {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.results-section h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+}
+
+.result-item {
+  background: #f9fafb;
+  border-left: 4px solid #f97316;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.result-item strong {
+  color: #1e3a8a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+  
+  .mode-selection {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mode-card {
+    max-width: 100%;
+  }
+  
+  .app-content {
+    padding: 20px 10px;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
