@@ -1,38 +1,39 @@
+// Major style update: match design in screenshots
 import React, { useState, useCallback } from 'react';
 import './App.css';
 
 // Inline icons matching provided CSS usage
 const Calculator = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <rect x="4" y="2" width="16" height="20" rx="2"/>
-    <line x1="8" y1="6" x2="16" y2="6"/>
-    <line x1="16" y1="14" x2="16" y2="14.01"/>
-    <line x1="12" y1="14" x2="12" y2="14.01"/>
-    <line x1="8" y1="14" x2="8" y2="14.01"/>
-    <line x1="16" y1="18" x2="16" y2="18.01"/>
-    <line x1="12" y1="18" x2="12" y2="18.01"/>
-    <line x1="8" y1="18" x2="8" y2="18.01"/>
+    <rect x="4" y="2" width="16" height="20" rx="2" />
+    <line x1="8" y1="6" x2="16" y2="6" />
+    <line x1="16" y1="14" x2="16" y2="14.01" />
+    <line x1="12" y1="14" x2="12" y2="14.01" />
+    <line x1="8" y1="14" x2="8" y2="14.01" />
+    <line x1="16" y1="18" x2="16" y2="18.01" />
+    <line x1="12" y1="18" x2="12" y2="18.01" />
+    <line x1="8" y1="18" x2="8" y2="18.01" />
   </svg>
 );
 
 const Wrench = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
   </svg>
 );
 
 const ArrowLeft = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <line x1="19" y1="12" x2="5" y2="12"/>
-    <polyline points="12 19 5 12 12 5"/>
+    <line x1="19" y1="12" x2="5" y2="12" />
+    <polyline points="12 19 5 12 12 5" />
   </svg>
 );
 
 const AlertTriangle = ({ size = 24, className = "" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-    <line x1="12" y1="9" x2="12" y2="13"/>
-    <line x1="12" y1="17" x2="12.01" y2="17"/>
+    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+    <line x1="12" y1="9" x2="12" y2="13" />
+    <line x1="12" y1="17" x2="12.01" y2="17" />
   </svg>
 );
 
@@ -131,13 +132,13 @@ export default function RapidMAO() {
             <p className="text-lg text-slate-600 mt-3">Calculate Your Maximum Allowable Offer in Seconds</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <button onClick={() => { setMode('simple'); setScreen('form'); }} className="p-8 bg-slate-800 border-4 border-slate-800 rounded-lg hover:border-amber-600 transition-all">
-              <Calculator size={64} className="w-16 h-16 text-amber-600 mx-auto mb-4" />
+            <button onClick={() => { setMode('simple'); setScreen('form'); }} className="p-8 bg-slate-800 border-4 border-amber-600/0 rounded-lg hover:border-amber-600 transition-all">
+              <Calculator className="w-16 h-16 text-amber-600 mx-auto mb-4" size={64} />
               <h2 className="text-2xl font-bold mb-2 text-amber-50">Quick Mode</h2>
               <p className="text-amber-100">I know my repair costs</p>
             </button>
-            <button onClick={() => { setMode('advanced'); setScreen('form'); }} className="p-8 bg-slate-800 border-4 border-slate-800 rounded-lg hover:border-amber-600 transition-all">
-              <Wrench size={64} className="w-16 h-16 text-amber-600 mx-auto mb-4" />
+            <button onClick={() => { setMode('advanced'); setScreen('form'); }} className="p-8 bg-slate-800 border-4 border-amber-600/0 rounded-lg hover:border-amber-600 transition-all">
+              <Wrench className="w-16 h-16 text-amber-600 mx-auto mb-4" size={64} />
               <h2 className="text-2xl font-bold mb-2 text-amber-50">Estimated Mode</h2>
               <p className="text-amber-100">Help me estimate repairs</p>
             </button>
@@ -152,14 +153,14 @@ export default function RapidMAO() {
       <div className="min-h-screen bg-amber-50 p-4">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center justify-between mb-6">
-            <button onClick={reset} className="flex items-center gap-2 text-slate-800 hover:text-amber-600 font-semibold">
+            <button className="flex items-center gap-2 text-slate-800 hover:text-amber-600 font-semibold" onClick={reset}>
               <ArrowLeft size={20} /> Back
             </button>
             <div className="text-center">
               <h1 className="text-3xl font-bold text-slate-800">Rapid<span className="text-amber-600">MAO</span></h1>
               <p className="text-xs text-slate-500 italic">Powered by The Wholesalers Lounge</p>
             </div>
-            <div className="w-20"></div>
+            <div className="w-20" />
           </div>
 
           <div className="space-y-6">
@@ -179,7 +180,7 @@ export default function RapidMAO() {
                 <AlertTriangle size={24} className="w-6 h-6 text-red-600 flex-shrink-0" />
                 <div className="text-sm text-red-900">
                   <div className="font-bold mb-1">⚠️ CAUTION</div>
-                  <p>Many fix-and-flip buyers avoid properties with fire damage or foundation issues. Communicate and disclose these to your buyer - they are your repeat business.</p>
+                  Many fix-and-flip buyers avoid properties with fire damage or foundation issues. Communicate and disclose these to your buyer - they are your repeat business.
                 </div>
               </div>
             )}
@@ -206,5 +207,4 @@ export default function RapidMAO() {
                 </div>
                 <div>
                   <label className="block text-sm mb-2 text-amber-50 font-semibold">Bathrooms</label>
-                  <input type="number" value={form.baths} onChange={(e) => handleInput('baths', e.target.value)} placeholder="2" className="w-full px-4 py-3 bg-amber-50 border-2 border-slate-800 rounded-lg text-slate-800 font-medium outline-none" />
-                </div
+                  <input type="number" value={form.baths} onChange={(e) => handleInput('baths', e.target.value)} placeholder="2" className="w-full px-4 py-3 bg-amber-50 border-2 border-slate-800 rounded-lg text-slate-800 font-medium
